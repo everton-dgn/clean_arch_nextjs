@@ -1,6 +1,6 @@
 'use client'
 
-import { Button } from 'components/atoms/Button'
+import { Button } from 'presentation/components/atoms/Button'
 
 import S from './styles.module.css'
 

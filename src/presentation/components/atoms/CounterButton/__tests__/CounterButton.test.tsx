@@ -5,7 +5,7 @@ import { renderWithProviders } from 'tests/providers/component'
 import { CounterButton } from '..'
 
 const mockIncrement = vi.fn()
-vi.mock('hooks/useCount', () => ({
+vi.mock('presentation/hooks/useCount', () => ({
   useCount: () => ({
     count: 0,
     increment: mockIncrement

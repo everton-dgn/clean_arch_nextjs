@@ -1,8 +1,8 @@
 'use client'
 
-import inter from 'theme/fontFamily'
+import inter from 'presentation/theme/fontFamily'
 
-import { ErrorFallback } from 'components/organisms/ErrorFallback'
+import { ErrorFallback } from 'presentation/components/organisms/ErrorFallback'
 
 type ErrorProps = {
   error: Error

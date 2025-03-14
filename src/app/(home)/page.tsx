@@ -1,6 +1,6 @@
 import Image from 'next/image'
 
-import { CounterButton } from 'components/atoms/CounterButton'
+import { CounterButton } from 'presentation/components/atoms/CounterButton'
 
 import S from './styles.module.css'
 

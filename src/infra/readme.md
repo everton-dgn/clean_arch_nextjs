@@ -1,0 +1,1 @@
+Esta camada fornece suporte técnico para as outras camadas. Ela inclui aspectos como acesso a banco de dados, envio de e-mails, operações de rede, etc. Por exemplo, a implementação dos repositórios, que você usaria para interagir com o banco de dados, seria colocada na camada de infraestrutura.
