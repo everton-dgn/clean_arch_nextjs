@@ -1,24 +1,24 @@
 <div align="center">
 
-<a href="./LICENSE">![GitHub](https://img.shields.io/github/license/everton-dgn/boilerplate_nextjs_app?style=plastic)</a>
-![GitHub repo size](https://img.shields.io/github/repo-size/everton-dgn/boilerplate_nextjs_app?style=plastic)
-![GitHub Repo stars](https://img.shields.io/github/stars/everton-dgn/boilerplate_nextjs_app?color=yellow&style=plastic)
+<a href="./LICENSE">![GitHub](https://img.shields.io/github/license/everton-dgn/clean_arch_nextjs?style=plastic)</a>
+![GitHub repo size](https://img.shields.io/github/repo-size/everton-dgn/clean_arch_nextjs?style=plastic)
+![GitHub Repo stars](https://img.shields.io/github/stars/everton-dgn/clean_arch_nextjs?color=yellow&style=plastic)
 
 </div>
 
-<h1 align="center">Boilerplate Complete and updated with Next.js, Typescript, Tests and more</h1>
+<h1 align="center">Boilerplate Complete and Updated with Next.js, TypeScript, Tests, and Clean Architecture</h1>
 
 <br />
 
 # :memo: About the Project
 
-This application is a boilerplate for complex and large systems, especially those that need to scale with security and code quality.
+This application is a boilerplate for complex and large systems, especially those that need to scale with security and code quality, following the principles of Clean Architecture.
 
-We sought to achieve 3 pillars: readability, reusability, and refactorability.
+We sought to achieve three pillars: readability, reusability, and refactorability.
 
-In the construction of the UI, the Atomic Design structure was chosen, organizing the global components into atoms, molecules, organisms and templates.
+For the UI construction, the Atomic Design structure was chosen, organizing global components into atoms, molecules, organisms, and templates.
 
-In addition to being constantly updated, this project was configured in the smallest details to serve as a basis for professional projects that require standardized and easy-to-maintain code architecture and design.
+In addition to being constantly updated, this project was meticulously configured to serve as a foundation for professional projects that require a standardized, maintainable, and scalable code architecture and design.
 
 <br />
 
@@ -55,6 +55,8 @@ In addition to being constantly updated, this project was configured in the smal
 
 💅 CSS Modules
 
+🏛 Clean Architecture
+
 🚩 Lints: Lefthook, BiomeJS and Commitlint
 
 ✅ Vitest
@@ -74,6 +76,8 @@ In addition to being constantly updated, this project was configured in the smal
 - [x] 100% coverage;
 
 - [x] Detection prefers-reduced-motion;
+- 
+- [x] Clean Architecture structure;
 
 <br />
 
@@ -94,7 +98,7 @@ In addition to being constantly updated, this project was configured in the smal
 ## Clone Repository
 
 ```bash
-git clone https://github.com/everton-dgn/boilerplate_nextjs_app.git
+git clone https://github.com/everton-dgn/clean_arch_nextjs.git
 ```
 
 ## Install Dependencies

@@ -1,11 +1,11 @@
 {
-  "name": "boilerplate_nextjs_app",
+  "name": "clean_arch_nextjs",
   "version": "1.0.0",
   "private": true,
   "license": "MIT",
   "author": "Éverton Toffanetto",
   "description": "This application is a boilerplate for complex and large systems, especially those that need to scale with security and code quality.",
-  "repository": "https://github.com/everton-dgn/boilerplate_nextjs_app",
+  "repository": "https://github.com/everton-dgn/clean_arch_nextjs",
   "scripts": {
     "dev": "next dev --turbo",
     "start": "next start",

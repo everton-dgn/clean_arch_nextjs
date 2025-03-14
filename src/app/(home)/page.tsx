@@ -1,10 +1,9 @@
 import Image from 'next/image'
 
+import LogoReact from 'presentation/assets/logo-react.svg'
 import { CounterButton } from 'presentation/components/atoms/CounterButton'
 
 import S from './styles.module.css'
-
-import LogoReact from 'assets/logo-react.svg'
 
 const Home = () => (
   <div className={S.container}>
@@ -20,7 +19,7 @@ const Home = () => (
         />
         <LogoReact data-testid="logo-react" />
       </div>
-      <h1 className={S.title}>Nextjs + React</h1>
+      <h1 className={S.title}>Clean Architecture</h1>
       <CounterButton />
     </main>
   </div>
