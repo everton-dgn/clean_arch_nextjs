@@ -1,0 +1,69 @@
+name: Production Deployment
+
+env:
+  VERCEL_ORG_ID: ${{ secrets.ORG_ID }}
+  VERCEL_PROJECT_ID: ${{ secrets.PROJECT_ID }}
+  LEFTHOOK: 0
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  Workflow:
+    runs-on: ubuntu-latest
+
+    steps:
+      #  config_actions:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      # add pnpm
+      - name: Config pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          run_install: false
+
+      #  setup_node:
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: lts/*
+          cache: 'pnpm'
+
+      #  install_dependencies:
+      - name: Install Dependencies
+        run: pnpm install --frozen-lockfile
+
+      #  typecheck:
+      - name: Run Typescript Check
+        run: pnpm typecheck
+
+      #  lint:
+      - name: Run Lint
+        run: pnpm biome:ci
+
+      #  test_ci:
+      - name: Run Tests
+        run: pnpm test:ci --reporter=verbose
+
+      #  build_deploy:
+      - name: Install Vercel CLI
+        run: pnpm i -g vercel@latest
+
+      - name: Pull Vercel Environment Information
+        run: vercel pull --yes --environment=production --token=${{ secrets.VERCEL_TOKEN }}
+
+      - name: Build Project Artifacts
+        run: vercel build --prod --token=${{ secrets.VERCEL_TOKEN }}
+
+      - name: Deploy Project Artifacts to Vercel
+        run: vercel deploy --prod --prebuilt --token=${{ secrets.VERCEL_TOKEN }}
+
+      #  release:
+      - name: Release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+        run: npx semantic-release
