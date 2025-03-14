@@ -9,7 +9,6 @@ Contains **reusable utilities and tools** that support the entire application, w
 - **`errors`**: Custom errors.
 - **`formatters`**: Formatting functions (e.g., dates, currencies).
 - **`utils`**: General utility functions.
-- **`validations`**: Generic validations (e.g., forms).
 
 ## Example
 

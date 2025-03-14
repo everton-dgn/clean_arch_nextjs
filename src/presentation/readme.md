@@ -15,6 +15,7 @@ The **presentation** layer is responsible for the UI and user interactions. This
 - **`store`**: State management (e.g., Zustand, Redux).
 - **`theme`**: Global styles and themes.
 - **`utils`**: UI-specific utilities.
+- **`validations`**: Generic validations (e.g., forms).
 
 ## Example
 
