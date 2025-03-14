@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import type { ReactNode } from 'react'
 
 export const metadata: Metadata = {
-  description: 'Boilerplate Nextjs + React',
+  description: 'Boilerplate Clean Architecture',
   title: 'Home Page'
 }
 
