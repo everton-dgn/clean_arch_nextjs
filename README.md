@@ -6,13 +6,13 @@
 
 </div>
 
-<h1 align="center">Boilerplate Complete and Updated with Next.js, TypeScript, Tests, and Clean Architecture</h1>
+<h1 align="center">Boilerplate Complete and Updated with Next.js, TypeScript, Tests, Clean Architecture and DDD</h1>
 
 <br />
 
 # :memo: About the Project
 
-This application is a boilerplate for complex and large systems, especially those that need to scale with security and code quality, following the principles of Clean Architecture.
+This application is a boilerplate for complex and large systems, especially those that need to scale with security and code quality, following the principles of Clean Architecture and of DDD.
 
 We sought to achieve three pillars: readability, reusability, and refactorability.
 
@@ -55,7 +55,7 @@ In addition to being constantly updated, this project was meticulously configure
 
 💅 CSS Modules
 
-🏛 Clean Architecture
+🏛 Clean Architecture + DDD
 
 🚩 Lints: Lefthook, BiomeJS and Commitlint
 
@@ -77,7 +77,7 @@ In addition to being constantly updated, this project was meticulously configure
 
 - [x] Detection prefers-reduced-motion;
 - 
-- [x] Clean Architecture structure;
+- [x] Clean Architecture structure + DDD;
 
 <br />
 

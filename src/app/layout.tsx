@@ -18,7 +18,10 @@ const RootLayout = ({ children }: { children: ReactNode }) => (
         content="Project frontend with Clean Architecture"
         name="description"
       />
-      <meta content="boilerplate, nextjs, clean architecture" name="keywords" />
+      <meta
+        content="boilerplate, ddd, nextjs, clean architecture"
+        name="keywords"
+      />
       <meta content="© Éverton Toffanetto" name="copyright" />
       <meta content="#fff" name="theme-color" />
       <link href="/favicon.png" rel="icon" type="image/png" />

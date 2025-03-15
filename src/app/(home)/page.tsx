@@ -19,7 +19,7 @@ const Home = () => (
         />
         <LogoReact data-testid="logo-react" />
       </div>
-      <h1 className={S.title}>Clean Architecture</h1>
+      <h1 className={S.title}>Clean Architecture + DDD</h1>
       <CounterButton />
     </main>
   </div>
