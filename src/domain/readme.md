@@ -8,6 +8,7 @@ The core layer of the application, containing **business rules** and logic that 
 - **`ports`**: Interfaces defining contracts (e.g., `ProductRepository`).
 - **`services`**: Domain services (e.g., complex calculations).
 - **`useCases`**: Use cases that orchestrate entities.
+- **`validations`**: Validation functions.
 
 ## Example
 

@@ -1,12 +1,16 @@
 # validations
 
-Includes validation functions to ensure data integrity and enforce business rules.
+Validations **ensure that data meets predefined criteria** before being processed.
 
 ## Example
 
 ```ts
-// core/validations/emailValidator.ts
-export const isValidEmail = (email: string) => {
-  return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
-};
+// utils/validations/isEmailValid.ts
+import { z } from "zod";
+
+export const emailSchema = z
+  .string()
+  .email("Invalid email format")
+  .min(5, "Email must have at least 5 characters")
+  .max(255, "Email must have at most 255 characters");
 ```

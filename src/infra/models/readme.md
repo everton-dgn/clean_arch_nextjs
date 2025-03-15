@@ -1,3 +1,19 @@
-Representação de dados externos
+# models
 
-Útil apenas se os dados da API são diferentes da entidade do domínio, caso contrário pode-se usar a entidade do domínio diretamente.
+**Models** are used for the **representation of external data** received from
+APIs, databases, or third-party services.
+
+They are **only useful** if the API data structure differs from the **domain
+entity**. Otherwise, the **domain entity** can be used directly, avoiding
+unnecessary conversions.
+
+## Example
+
+```ts
+// infrastructure/models/externalProductModel.ts
+interface ExternalProductModel {
+  product_id: string;
+  product_name: string;
+  cost: number;
+} 
+```
