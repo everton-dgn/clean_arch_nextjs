@@ -10,3 +10,20 @@ This project follows an adaptation of **Clean Architecture** with functional par
 - **`src/infra`**: Infrastructure implementations (databases, APIs).
 - **`src/presentation`**: UI and presentation layer.
 - **`src/tests`**: Automated tests.  
+
+---
+
+# 🌐 Portuguese / Português
+
+# Estrutura do Projeto
+
+Este projeto segue uma adaptação da **Arquitetura Limpa** com paradigmas funcionais, utilizando Next.js 15 e TypeScript. A estrutura é dividida em camadas claras para separar responsabilidades, facilitar a manutenção e garantir a testabilidade. Aqui está uma visão geral:
+
+- **`src/@types`**: Definições de tipos globais.
+- **`src/app`**: Rotas e páginas do Next.js (Frameworks/Drivers).
+- **`src/application`**: Orquestração da lógica da aplicação.
+- **`src/core`**: Utilitários e ferramentas reutilizáveis.
+- **`src/domain`**: Regras de negócio e lógica central.
+- **`src/infra`**: Implementações de infraestrutura (bancos de dados, APIs).
+- **`src/presentation`**: Camada de UI e apresentação.
+- **`src/tests`**: Testes automatizados.
