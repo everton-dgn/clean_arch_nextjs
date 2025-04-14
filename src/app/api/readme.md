@@ -19,3 +19,29 @@ export async function GET() {
   }
 }
 ```
+
+---
+
+# 🌐 Portuguese / Português
+
+# API
+
+**`src/app/api`**: Rotas de API do lado do servidor usando Next.js (manipuladores para lógica de backend e processamento de dados).
+
+## Exemplo
+
+```ts
+// src/app/api/products/route.ts
+import { NextResponse } from "next/server";
+import { listProducts } from "domain/useCases/listProducts";
+import { productRepositoryAdapter } from "infra/adapters/productRepository";
+
+export async function GET() {
+  try {
+    const products = await listProducts(productRepositoryAdapter());
+    return NextResponse.json(products);
+  } catch (error) {
+    return NextResponse.json({ error: "Failed to fetch products" }, { status: 500 });
+  }
+}
+```
