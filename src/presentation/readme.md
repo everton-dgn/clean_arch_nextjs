@@ -31,3 +31,41 @@ export const Button = ({ label, onClick }: ButtonProps) => (
   </button>
 );
 ```
+
+---
+
+# 🌐 Portuguese / Português
+
+# presentation
+
+A camada de **apresentação** é responsável pela UI e interações do usuário. É aqui que os componentes, estilos e hooks são estruturados.
+
+## Subdiretórios
+
+- **`assets`**: Recursos estáticos (ex: imagens, SVGs).
+- **`components`**: Componentes React organizados pelo Atomic Design.
+  - **`atoms`**: Componentes básicos (ex: `Button`).
+  - **`molecules`**: Combinações de átomos.
+  - **`organisms`**: Componentes complexos (ex: `ErrorFallback`).
+  - **`providers`**: Contextos e provedores (ex: `MainProvider`).
+  - **`templates`**: Layouts reutilizáveis.
+- **`hooks`**: Hooks personalizados (ex: `useCount`).
+- **`store`**: Gerenciamento de estado (ex: Zustand, Redux).
+- **`theme`**: Estilos globais e temas.
+- **`utils`**: Utilitários específicos para UI.
+- **`validations`**: Validações genéricas (ex: formulários).
+
+## Exemplo
+
+```tsx
+// presentation/components/atoms/Button/index.tsx
+import styles from "./styles.module.css";
+
+type ButtonProps = { label: string; onClick: () => void };
+
+export const Button = ({ label, onClick }: ButtonProps) => (
+  <button className={styles.button} onClick={onClick}>
+    {label}
+  </button>
+);
+```
