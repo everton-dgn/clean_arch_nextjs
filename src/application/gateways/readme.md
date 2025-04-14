@@ -25,3 +25,35 @@ export async function getUser(userId: string) {
   return userFromApi;
 }
 ```
+
+---
+
+# 🌐 Portuguese / Português
+
+# `gateways`
+
+📌 Interface entre a aplicação e fontes de dados externas, abstraindo detalhes de implementação.
+
+**Você deve usar gateways quando:**
+1. Os dados podem vir de diferentes fontes (cache, IndexedDB, REST API, GraphQL, WebSockets, etc.).
+2. Você precisa aplicar lógica antes de acessar o repositório (ex: tentar o cache antes da API).
+3. Você quer manter os `useCases` independentes dos detalhes de infraestrutura, facilitando mudanças.
+4. Você precisa combinar múltiplos repositórios em uma única interface.
+
+## Exemplo
+
+```ts
+// application/gateways/userGateway.ts
+import { getUserFromCache, saveUserToCache } from "infra/repositories/cacheUserRepository";
+import { getUserFromApi } from "infra/repositories/httpUserRepository";
+
+export async function getUser(userId: string) {
+  const cachedUser = await getUserFromCache(userId);
+  if (cachedUser) return cachedUser;
+
+  const userFromApi = await getUserFromApi(userId);
+  if (userFromApi) await saveUserToCache(userFromApi);
+
+  return userFromApi;
+}
+```

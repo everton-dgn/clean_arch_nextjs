@@ -37,3 +37,47 @@ export const useProducts = () => {
   return { products, loading };
 };
 ```
+
+---
+
+# 🌐 Portuguese / Português
+
+# application
+
+Esta camada é responsável por **orquestrar a lógica da aplicação**, conectando o domínio (`domain`) com a infraestrutura (`infra`).
+
+## Subdiretórios
+
+- **`factories`**: Funções para criar instâncias de serviços ou adaptadores.
+- **`fetchers`**: Funções para buscar dados de fontes externas.
+- **`gateways`**: Interfaces e implementações para serviços externos.
+
+## Exemplo
+
+```ts
+// application/fetchers/useProducts.ts
+import { useEffect, useState } from "react";
+import { listProducts } from "domain/useCases/listProducts";
+import { productRepositoryAdapter } from "infra/adapters/productRepository";
+
+export const useProducts = () => {
+  const [products, setProducts] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      setLoading(true);
+      try {
+        const data = await listProducts(productRepositoryAdapter());
+        setProducts(data);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchData();
+  }, []);
+
+  return { products, loading };
+};
+```
