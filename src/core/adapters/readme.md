@@ -12,3 +12,22 @@ export const httpClient = {
   get: async (url: string) => axios.get(url).then(res => res.data),
 }
 ```
+
+---
+
+# 🌐 Portuguese / Português
+
+# adapters
+
+Faz a ponte entre diferentes implementações, permitindo integrações perfeitas com serviços externos, APIs, bibliotecas de terceiros ou abstrações internas.
+
+## Exemplo
+
+```ts
+// core/adapters/httpClient.ts
+import axios from 'axios'
+
+export const httpClient = {
+  get: async (url: string) => axios.get(url).then(res => res.data),
+}
+```
