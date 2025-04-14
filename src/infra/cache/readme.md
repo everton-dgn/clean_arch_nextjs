@@ -35,3 +35,45 @@ const useProductCache = (repository: ProductPort) => {
   return { products, isLoading, addProduct };
 };
 ```
+
+---
+
+# 🌐 Portuguese / Português
+
+# cache
+
+A camada de **cache** gerencia o armazenamento temporário de dados, melhorando o desempenho ao
+evitar requisições externas desnecessárias. Ela permite **acesso rápido** a dados frequentemente
+utilizados sem precisar acessar um banco de dados ou API repetidamente.
+
+Em **aplicações React**, o cache pode ser gerenciado usando **React Query**, que
+fornece atualizações automáticas em segundo plano e tratamento de dados obsoletos.
+
+## Exemplo
+
+```ts
+// infrastructure/cache/useProductCache.ts
+import { useQuery, useMutation, QueryClient } from "@tanstack/react-query";
+import { Product } from "domain/entities/product";
+import { ProductPort } from "domain/ports/productPort";
+
+const queryClient = new QueryClient();
+
+const useProductCache = (repository: ProductPort) => {
+  const { data: products, isLoading } = useQuery({
+    queryKey: ["products"],
+    queryFn: repository.getAll,
+  });
+
+  const addProduct = useMutation({
+    mutationFn: async (product: Product) => {
+      await repository.save(product);
+    },
+    onSuccess: () => {
+      queryClient.invalidateQueries({ queryKey: ["products"] });
+    },
+  });
+
+  return { products, isLoading, addProduct };
+};
+```
