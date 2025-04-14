@@ -33,3 +33,43 @@ type Order = {
 
 export default Order;
 ```
+
+---
+
+# 🌐 Portuguese / Português
+
+# Agregados
+
+Agregados representam **clusters de objetos de domínio** que são tratados como uma única unidade. Eles impõem **invariantes** e garantem consistência dentro de seus limites. A **raiz do agregado** é a entidade principal responsável por manter a integridade do agregado e coordenar operações.
+
+Agregados devem ser projetados para minimizar dependências e garantir que todas as operações mantenham um estado válido.
+
+## Características dos Agregados
+
+1. **Raiz Única (Raiz do Agregado)**: Apenas a raiz pode ser referenciada diretamente por outras partes do sistema.
+2. **Consistência Interna**: Todas as regras de negócio dentro do agregado são aplicadas internamente, sem depender de operações externas inconsistentes.
+3. **Encapsulamento**: Entidades dentro do agregado não podem ser manipuladas diretamente de fora; elas devem ser acessadas através da raiz do agregado.
+
+## Quando Usar Agregados?
+
+- Quando múltiplas entidades precisam ser tratadas **atomicamente** (por exemplo, um **Pedido** e seus **Itens de Pedido**).
+- Quando é necessário **garantir consistência** dentro de um conjunto de entidades relacionadas.
+- Quando definir um **limite explícito** é importante para evitar dependências desnecessárias entre entidades.
+
+## Exemplo
+
+```ts
+// domain/aggregates/order.ts
+import { OrderItem } from "../entities/orderItem";
+import { Customer } from "../entities/customer";
+
+type Order = {
+  id: string;
+  customer: Customer;
+  items: OrderItem[];
+  total(): number;
+  addItem(item: OrderItem): void;
+};
+
+export default Order;
+```
