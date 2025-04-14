@@ -23,3 +23,33 @@ interface ProductPort {
   delete(id: string): Promise<void>;
 }
 ```
+
+---
+
+# 🌐 Portuguese / Português
+
+# portas
+
+As portas definem **contratos** (interfaces) que estabelecem comunicação entre a
+**camada de domínio** e camadas externas como **infraestrutura** e **aplicação**.
+Elas garantem que a **lógica de negócios** permaneça independente de
+implementações específicas.
+
+Ao usar portas, podemos trocar dependências externas (por exemplo, bancos de dados, APIs ou
+serviços de terceiros) sem modificar a **lógica central do domínio**.
+
+É a interface que define o repositório.
+
+## Exemplo
+
+```ts
+// domain/ports/productPort.ts
+import { Product } from "../entities/product";
+
+interface ProductPort {
+  getAll(): Promise<Product[]>;
+  getById(id: string): Promise<Product | null>;
+  save(product: Product): Promise<void>;
+  delete(id: string): Promise<void>;
+}
+```
