@@ -8,8 +8,6 @@
 
 <h1 align="center">Boilerplate Complete and Updated with Next.js, TypeScript, Tests, Clean Architecture and DDD</h1>
 
-<br />
-
 # :memo: About the Project
 
 This application is a boilerplate for complex and large systems, especially those that need to scale with security and code quality, following the principles of Clean Architecture and of DDD.
@@ -19,8 +17,6 @@ We sought to achieve three pillars: readability, reusability, and refactorabilit
 For the UI construction, the Atomic Design structure was chosen, organizing global components into atoms, molecules, organisms, and templates.
 
 In addition to being constantly updated, this project was meticulously configured to serve as a foundation for professional projects that require a standardized, maintainable, and scalable code architecture and design.
-
-<br />
 
 ---
 
@@ -43,8 +39,6 @@ In addition to being constantly updated, this project was meticulously configure
 - [Important Considerations](#rotating_light-important-considerations)
 - [Author](#technologist-author)
 
-<br />
-
 ---
 
 # :globe_with_meridians: Technologies
@@ -63,8 +57,6 @@ In addition to being constantly updated, this project was meticulously configure
 
 🐙 React Testing Library
 
-<br />
-
 ---
 
 # :triangular_flag_on_post: Features
@@ -76,10 +68,8 @@ In addition to being constantly updated, this project was meticulously configure
 - [x] 100% coverage;
 
 - [x] Detection prefers-reduced-motion;
-- 
-- [x] Clean Architecture structure + DDD;
 
-<br />
+- [x] Clean Architecture structure + DDD;
 
 ---
 
@@ -88,8 +78,6 @@ In addition to being constantly updated, this project was meticulously configure
 - node (latest version lts).
 
 - pnpm (latest version lts).
-
-<br />
 
 ---
 
@@ -165,13 +153,11 @@ pnpm format
 pnpm check:update
 ```
 
-<br />
-
 ---
 
 # :technologist: Author
 
-By [Éverton Toffanetto](https://programadordesucesso.com).
+By [Éverton Toffanetto](https://devinsights.dev).
 
 :link: LinkedIn: https://www.linkedin.com/in/everton-toffanetto
 
@@ -183,7 +169,6 @@ By [Éverton Toffanetto](https://programadordesucesso.com).
 
 <h1 align="center">Boilerplate Completo e Atualizado com Next.js, TypeScript, Testes, Clean Architecture e DDD</h1>
 
-<br />
 
 # :memo: Sobre o Projeto
 
@@ -194,8 +179,6 @@ Buscou-se alcançar três pilares: legibilidade, reusabilidade e refatorabilidad
 Para a construção da UI, foi escolhida a estrutura Atomic Design, organizando componentes globais em átomos, moléculas, organismos e templates.
 
 Além de estar constantemente atualizado, este projeto foi meticulosamente configurado para servir como base para projetos profissionais que exigem uma arquitetura e design de código padronizado, manutenível e escalável.
-
-<br />
 
 ---
 
@@ -218,8 +201,6 @@ Além de estar constantemente atualizado, este projeto foi meticulosamente confi
 - [Considerações Importantes](#rotating_light-considerações-importantes)
 - [Autor](#technologist-autor)
 
-<br />
-
 ---
 
 # :globe_with_meridians: Tecnologias
@@ -238,8 +219,6 @@ Além de estar constantemente atualizado, este projeto foi meticulosamente confi
 
 🐙 React Testing Library
 
-<br />
-
 ---
 
 # :triangular_flag_on_post: Funcionalidades
@@ -254,8 +233,6 @@ Além de estar constantemente atualizado, este projeto foi meticulosamente confi
 
 - [x] Estrutura Clean Architecture + DDD;
 
-<br />
-
 ---
 
 # :white_check_mark: Pré-requisitos
@@ -263,8 +240,6 @@ Além de estar constantemente atualizado, este projeto foi meticulosamente confi
 - node (última versão lts).
 
 - pnpm (última versão lts).
-
-<br />
 
 ---
 
@@ -340,13 +315,11 @@ pnpm format
 pnpm check:update
 ```
 
-<br />
-
 ---
 
 # :technologist: Autor
 
-Por [Éverton Toffanetto](https://programadordesucesso.com).
+Por [Éverton Toffanetto](https://devinsights.dev).
 
 :link: LinkedIn: https://www.linkedin.com/in/everton-toffanetto
 
